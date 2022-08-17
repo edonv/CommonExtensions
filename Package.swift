@@ -8,8 +8,14 @@ let package = Package(
     products: [
         // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
-            name: "Common Extensions",
-            targets: ["Common Extensions"]),
+            name: "CombineExtensions",
+            targets: ["CombineExtensions"]),
+        .library(
+            name: "SwiftUIExtensions",
+            targets: ["SwiftUIExtensions"]),
+        .library(
+            name: "FoundationExtensions",
+            targets: ["FoundationExtensions"]),
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
@@ -19,10 +25,17 @@ let package = Package(
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
         .target(
-            name: "Common Extensions",
+            name: "CombineExtensions",
             dependencies: []),
+        .target(
+            name: "SwiftUIExtensions",
+            dependencies: []),
+        .target(
+            name: "FoundationExtensions",
+            dependencies: []),
+        
         .testTarget(
-            name: "Common ExtensionsTests",
-            dependencies: ["Common Extensions"]),
+            name: "CombineExtensionsTests",
+            dependencies: ["CombineExtensions"]),
     ]
 )
