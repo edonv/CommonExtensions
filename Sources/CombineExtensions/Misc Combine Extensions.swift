@@ -10,7 +10,7 @@ import Combine
 
 // MARK: - Convenience Future Init
 
-@available(OSX 10.15, *)
+@available(OSX 10.15, iOS 13, *)
 extension Future {
     /// Initializes a new `Future` that immediately completes with the provided `value`.
     /// - Parameter value: An `Output` that the new `Future` should complete with.
@@ -23,7 +23,7 @@ extension Future {
 
 // MARK: - Try Flat Map
 
-@available(OSX 10.15, *)
+@available(OSX 10.15, iOS 13, *)
 extension Publisher {
     /// A `Publishers.FlatMap` that can throw.
     /// - Parameters:
@@ -52,7 +52,7 @@ extension Publisher {
 
 // MARK: - As Void
 
-@available(OSX 10.15, *)
+@available(OSX 10.15, iOS 13, *)
 extension Publisher {
     /// Erases the value of the upstream publisher, carrying only the completion state downstream.
     public func asVoid() -> AnyPublisher<Void, Failure> {
@@ -64,7 +64,7 @@ extension Publisher {
 
 // MARK: - Replace Error Overloads
 
-@available(OSX 10.15, *)
+@available(OSX 10.15, iOS 13, *)
 extension Publisher where Failure: Error {
     /// Handles errors from an upstream publisher by replacing it with another publisher, but only if the
     /// provided `handler` returns `true`.
@@ -86,7 +86,7 @@ extension Publisher where Failure: Error {
     }
 }
 
-@available(OSX 10.15, *)
+@available(OSX 10.15, iOS 13, *)
 extension Publisher where Failure: Error, Failure: Equatable {
     /// Handles errors from an upstream publisher by replacing it with another publisher, but only if the
     /// error matches the provided error.
