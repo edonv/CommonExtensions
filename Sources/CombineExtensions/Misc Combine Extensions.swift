@@ -55,7 +55,7 @@ extension Publisher {
 @available(OSX 10.15, *)
 extension Publisher {
     /// Erases the value of the upstream publisher, carrying only the completion state downstream.
-    func asVoid() -> AnyPublisher<Void, Failure> {
+    public func asVoid() -> AnyPublisher<Void, Failure> {
         return self
             .map { _ in () }
             .eraseToAnyPublisher()
