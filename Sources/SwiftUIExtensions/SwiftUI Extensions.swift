@@ -20,11 +20,11 @@ extension Binding {
     }
 }
 
-@available(OSX 10.15, iOS 13, *)
-extension Text: ExpressibleByStringLiteral {
-    public typealias StringLiteralType = String
-    
-    public init(stringLiteral value: Self.StringLiteralType) {
-        self = Text(value)
-    }
-}
+//@available(OSX 10.15, iOS 13, *)
+//extension Text: ExpressibleByStringLiteral {
+//    public typealias StringLiteralType = String
+//    
+//    public init(stringLiteral value: Self.StringLiteralType) {
+//        self = Text(value)
+//    }
+//}
