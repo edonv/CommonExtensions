@@ -85,6 +85,8 @@ extension Publisher where Failure: Error {
     }
 }
 
+// MARK: - Replace Error
+
 @available(OSX 10.15, iOS 13, *)
 extension Publisher where Failure: Error, Failure: Equatable {
     /// Handles errors from an upstream publisher by replacing it with another publisher, but only if the
@@ -96,6 +98,8 @@ extension Publisher where Failure: Error, Failure: Equatable {
         self.replaceError(with: output) { $0 == error }
     }
 }
+
+// MARK: - Filter Key Path
 
 @available(OSX 10.15, iOS 13, *)
 extension Publisher {
