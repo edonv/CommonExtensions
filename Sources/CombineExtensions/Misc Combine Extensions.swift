@@ -36,14 +36,13 @@ extension Publisher {
     public func tryFlatMap<P: Publisher>(
         maxPublishers: Subscribers.Demand = .unlimited,
         _ transform: @escaping (Output) throws -> P
-    ) -> Publishers.FlatMap<AnyPublisher<P.Output, Error>, Self> {
-        return flatMap(maxPublishers: maxPublishers, { input -> AnyPublisher<P.Output, Error> in
+    ) -> Publishers.FlatMap<AnyPublisher<P.Output, Self.Failure>, Self> where Self.Failure == P.Failure {
+        return flatMap(maxPublishers: maxPublishers, { input -> AnyPublisher<P.Output, Self.Failure> in
             do {
                 return try transform(input)
-                    .mapError { $0 as Error }
                     .eraseToAnyPublisher()
             } catch {
-                return Fail(outputType: P.Output.self, failure: error)
+                return Fail(outputType: P.Output.self, failure: error as! Failure)
                     .eraseToAnyPublisher()
             }
         })
