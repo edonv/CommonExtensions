@@ -1,5 +1,5 @@
 //
-//  SwiftUI Extensions.swift
+//  Text+OptionalString.swift
 //  
 //
 //  Created by Edon Valdman on 8/17/22.
@@ -8,15 +8,12 @@
 import Foundation
 import SwiftUI
 
-// MARK: - Optional Binding Operator
+// MARK: - Optional String Text Init
 
-@available(OSX 10.15, iOS 13, *)
-extension Binding {
-    public static func ?? (lhs: Binding<Optional<Value>>, rhs: Value) -> Binding<Value> {
-        Binding(
-            get: { lhs.wrappedValue ?? rhs },
-            set: { lhs.wrappedValue = $0 }
-        )
+@available(macOS 10.15, iOS 13, *)
+extension Text {
+    public init<S>(_ content: S?) where S : StringProtocol {
+//        self.init()
     }
 }
 
