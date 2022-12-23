@@ -17,7 +17,7 @@ extension Publisher {
     ///   - keyPath: `KeyPath` to a property whose value should be compared.
     ///   - aValue: Value to be compared to provided property of each incoming element.
     /// - Returns: A publisher that republishes all elements whos provided property match `aValue`.
-    public func filter<T: Equatable>(_ keyPath: KeyPath<Output, T>, equals aValue: T) -> Publishers.Filter<Self> {
+    public func filter<T: Equatable>(by keyPath: KeyPath<Output, T>, equals aValue: T) -> Publishers.Filter<Self> {
         self.filter { $0[keyPath: keyPath] == aValue }
     }
 }
