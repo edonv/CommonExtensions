@@ -1,5 +1,5 @@
 //
-//  Publisher+FilterKeyPath.swift
+//  Publisher+filterByKeyPath.swift
 //  
 //
 //  Created by Edon Valdman on 12/22/22.

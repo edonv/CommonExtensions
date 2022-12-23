@@ -1,5 +1,5 @@
 //
-//  Publisher+TryFlatMap.swift
+//  Publisher+tryFlatMap.swift
 //  
 //
 //  Created by Edon Valdman on 12/22/22.

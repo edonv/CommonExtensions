@@ -1,5 +1,5 @@
 //
-//  View+MinimumPadding.swift
+//  View+minimumPadding.swift
 //  
 //  https://gist.github.com/amirdew/a7ee19de9fb9a2139e94ef155b6f5e9b
 //  Created by Amir Khorsandi on 12/22/22.

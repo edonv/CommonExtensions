@@ -1,5 +1,5 @@
 //
-//  Future+InitWithValue.swift
+//  Future+initWithValue.swift
 //  
 //
 //  Created by Edon Valdman on 12/22/22.

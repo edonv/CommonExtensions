@@ -1,5 +1,5 @@
 //
-//  Publisher+ReplaceError.swift
+//  Publisher+replaceErrorWith.swift
 //  
 //
 //  Created by Edon Valdman on 12/22/22.
