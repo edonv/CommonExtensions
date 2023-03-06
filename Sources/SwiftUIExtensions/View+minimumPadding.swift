@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-@available(OSX 11, iOS 13, *)
+@available(iOS 14, macOS 11, macCatalyst 14, tvOS 14, watchOS 7, *)
 extension View {
     /// Sets minimum padding on the set edge. The calculation takes into account safe areas.
     /// - Parameters:
