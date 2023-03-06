@@ -10,7 +10,7 @@ import SwiftUI
 
 // MARK: - Optional Binding Operator
 
-@available(OSX 10.15, iOS 13, *)
+@available(iOS 13, macOS 10.15, macCatalyst 13, tvOS 13, watchOS 6, *)
 extension Binding {
     /// Optional operator for `Binding` types.
     /// - Parameters:
