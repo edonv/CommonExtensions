@@ -10,7 +10,7 @@ import Combine
 
 @available(OSX 10.15, iOS 13, *)
 extension Publisher {
-    func asyncMap<T>(
+    public func asyncMap<T>(
         _ transform: @escaping (Output) async -> T
     ) -> Publishers.FlatMap<Future<T, Never>, Self> {
         flatMap { value in
@@ -23,7 +23,7 @@ extension Publisher {
         }
     }
     
-    func asyncMap<T>(
+    public func asyncMap<T>(
         _ transform: @escaping (Output) async throws -> T
     ) -> Publishers.FlatMap<Future<T, Error>, Self> {
         flatMap { value in
@@ -41,7 +41,7 @@ extension Publisher {
     }
     
     @available(OSX 11, iOS 14, *)
-    func asyncMap<T>(
+    public func asyncMap<T>(
         _ transform: @escaping (Output) async throws -> T
     ) -> Publishers.FlatMap<Future<T, Error>, Publishers.SetFailureType<Self, Error>> {
         flatMap { value in
