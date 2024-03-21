@@ -26,13 +26,19 @@ let package = Package(
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
         .target(
             name: "CombineExtensions",
-            dependencies: []),
+            dependencies: [],
+            resources: [.copy("../PrivacyInfo.xcprivacy")]
+        ),
         .target(
             name: "SwiftUIExtensions",
-            dependencies: []),
+            dependencies: [],
+            resources: [.copy("../PrivacyInfo.xcprivacy")]
+        ),
         .target(
             name: "FoundationExtensions",
-            dependencies: []),
+            dependencies: [],
+            resources: [.copy("../PrivacyInfo.xcprivacy")]
+        ),
         
         .testTarget(
             name: "CombineExtensionsTests",
