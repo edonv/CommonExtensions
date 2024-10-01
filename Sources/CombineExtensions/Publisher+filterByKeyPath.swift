@@ -10,7 +10,7 @@ import Combine
 
 // MARK: - Filter Key Path
 
-@available(OSX 10.15, iOS 13, *)
+@available(macOS 10.15, iOS 13, *)
 extension Publisher {
     /// Republishes all elements whose provided property match a provided value.
     /// - Parameters:

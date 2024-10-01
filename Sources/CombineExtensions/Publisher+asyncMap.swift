@@ -8,7 +8,7 @@
 import Foundation
 import Combine
 
-@available(OSX 10.15, iOS 13, *)
+@available(macOS 10.15, iOS 13, *)
 extension Publisher {
     public func asyncMap<T>(
         _ transform: @escaping (Output) async -> T
@@ -40,7 +40,7 @@ extension Publisher {
         }
     }
     
-    @available(OSX 11, iOS 14, *)
+    @available(macOS 11, iOS 14, *)
     public func asyncMap<T>(
         _ transform: @escaping (Output) async throws -> T
     ) -> Publishers.FlatMap<Future<T, Error>, Publishers.SetFailureType<Self, Error>> {

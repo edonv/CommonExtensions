@@ -10,7 +10,7 @@ import Combine
 
 // MARK: - Try Flat Map
 
-@available(OSX 10.15, iOS 13, *)
+@available(macOS 10.15, iOS 13, *)
 extension Publisher {
     /// A `Publishers.FlatMap` that can throw.
     /// - Parameters:

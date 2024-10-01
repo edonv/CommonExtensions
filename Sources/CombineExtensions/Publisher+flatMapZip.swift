@@ -10,7 +10,7 @@ import Combine
 
 // MARK: - Flat Map Zip
 
-@available(OSX 10.15, iOS 13, *)
+@available(macOS 10.15, iOS 13, *)
 extension Publisher {
     /// Combines elements from another publisher, created by transforming elements of the upstream publisher,
     /// and deliver pairs of elements as tuples.

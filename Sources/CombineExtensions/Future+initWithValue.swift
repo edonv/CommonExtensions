@@ -10,7 +10,7 @@ import Combine
 
 // MARK: - Convenience Future Init
 
-@available(OSX 10.15, iOS 13, *)
+@available(macOS 10.15, iOS 13, tvOS 13, *)
 extension Future {
     /// Initializes a new `Future` that immediately completes with the provided `value`.
     /// - Parameter value: An `Output` that the new `Future` should complete with.
