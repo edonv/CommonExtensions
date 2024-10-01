@@ -9,13 +9,16 @@ let package = Package(
         // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
             name: "CombineExtensions",
-            targets: ["CombineExtensions"]),
+            targets: ["CombineExtensions"]
+        ),
         .library(
             name: "SwiftUIExtensions",
-            targets: ["SwiftUIExtensions"]),
+            targets: ["SwiftUIExtensions"]
+        ),
         .library(
             name: "FoundationExtensions",
-            targets: ["FoundationExtensions"]),
+            targets: ["FoundationExtensions"]
+        ),
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
@@ -42,6 +45,7 @@ let package = Package(
         
         .testTarget(
             name: "CombineExtensionsTests",
-            dependencies: ["CombineExtensions"]),
+            dependencies: ["CombineExtensions"]
+        ),
     ]
 )
