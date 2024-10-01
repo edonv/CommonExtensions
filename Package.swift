@@ -37,12 +37,12 @@ let package = Package(
             resources: [.copy("../PrivacyInfo.xcprivacy")]
         ),
         .target(
-            name: "SwiftUIExtensions",
+            name: "FoundationExtensions",
             dependencies: [],
             resources: [.copy("../PrivacyInfo.xcprivacy")]
         ),
         .target(
-            name: "FoundationExtensions",
+            name: "SwiftUIExtensions",
             dependencies: [],
             resources: [.copy("../PrivacyInfo.xcprivacy")]
         ),
