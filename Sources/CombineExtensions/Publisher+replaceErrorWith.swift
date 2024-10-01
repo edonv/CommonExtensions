@@ -10,7 +10,7 @@ import Combine
 
 // MARK: - Replace Error Overloads
 
-@available(macOS 10.15, iOS 13, *)
+@available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
 extension Publisher where Failure: Error {
     /// Handles errors from an upstream publisher by replacing it with another publisher, but only if the
     /// provided `handler` returns `true`.
@@ -34,7 +34,7 @@ extension Publisher where Failure: Error {
 
 // MARK: - Replace Error
 
-@available(macOS 10.15, iOS 13, *)
+@available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
 extension Publisher where Failure: Error, Failure: Equatable {
     /// Handles errors from an upstream publisher by replacing it with another publisher, but only if the
     /// error matches the provided error.

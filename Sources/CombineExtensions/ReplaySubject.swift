@@ -8,7 +8,7 @@
 import Foundation
 import Combine
 
-@available(macOS 10.15, iOS 13, *)
+@available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
 extension Publisher {
     /// Provides a subject that shares a single subscription to the upstream publisher and
     /// replays at most `bufferSize` items emitted by that publisher.
@@ -20,7 +20,7 @@ extension Publisher {
     }
 }
 
-@available(macOS 10.15, iOS 13, *)
+@available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
 extension Publishers {
     /// A subject that shares a single subscription to the upstream publisher and
     /// replays at most `bufferSize` items emitted by that publisher.
@@ -63,7 +63,7 @@ extension Publishers {
     }
 }
 
-@available(macOS 10.15, iOS 13, *)
+@available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
 extension Subscriptions {
     /// A class representing the connection of a subscriber to a publisher.
     public final class ReplaySubject<Output, Failure: Error>: Subscription {

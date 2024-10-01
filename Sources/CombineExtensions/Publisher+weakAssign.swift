@@ -7,7 +7,7 @@
 
 import Combine
 
-@available(macOS 10.15, iOS 13, *)
+@available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
 extension Publisher where Failure == Never {
     public func weakAssign<T: AnyObject>(
         to keyPath: ReferenceWritableKeyPath<T, Output>,
